@@ -1,0 +1,148 @@
+body {
+    background-color: #F8F7BA;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Shojumaru";
+    font-size: 4rem;
+    color: #E45A92;
+}
+
+h1.dance {
+    animation: dance 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes dance {
+    0% {
+        transform: translateX(-10px) rotate(-2deg);
+    }
+    100% {
+        transform: translateX(10px) rotate(2deg);
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header h2 {
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+    margin: 15px;
+    color: #715A5A;
+    font-family: "Amatic SC";
+    font-size: 30px;
+    font-weight: bolder;
+    font-variant-numeric: tabular-nums;
+}
+
+.startButton {
+    display: inline-block;
+    height: 40px;
+    width: 60px;
+    color: white;
+    font-weight: bold;
+    font-family: "Amatic SC";
+    background-color: #4A90E2;
+    font-size: 25px;
+    border: 2px solid #715A5A;
+    border-radius: 5%;
+    transition: 0.3s;
+}
+
+.startButton:hover {
+    transform: scale(1.08) rotateY(8deg);
+}
+
+.resetButton {
+    display: inline-block;
+    height: 40px;
+    width: 60px;
+    color: white;
+    font-weight: bold;
+    font-family: "Amatic SC";
+    background-color: #4A90E2;
+    font-size: 25px;
+    border: 2px solid #715A5A;
+    border-radius: 5%;
+    transition: 0.3s;
+}
+
+.resetButton:hover {
+    transform: scale(1.08) rotateY(8deg);
+}
+
+.gameContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 5px solid #4A90E2;
+    gap: 10px;
+    margin: 0px 10px;
+    padding: 10px;
+}
+
+.card {
+    height: 120px;
+    width: 130px;
+    border: 5px solid #d1be7b;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: scale(1.05) rotateY(10deg);
+}
+
+.front {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.back {
+    backface-visibility: hidden;
+}
+
+.card.flipped .front {
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.card.flipped .back {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+@media (max-width: 720px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .gameContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .card {
+        height: 96px;
+        width: 96px;
+        border: 3px solid #E0DF8A;
+    }
+}
