@@ -243,9 +243,8 @@ h1.dance {
         gap: 5px;
         padding: 5px;
         margin: 5px auto;
-        margin-top: 30px;
         max-width: 98%;
-        max-height: 70vh; /* Limit height to fit within viewport */
+        max-height: 60vh; /* Limit height to fit within viewport */
     }
 
     .card {
