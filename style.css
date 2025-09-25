@@ -197,54 +197,48 @@ h1.dance {
 
 /* Responsive adjustments for small screens */
 @media (max-width: 450px) {
-    body {
-        padding-top: 15px; /* Added to ensure h1 starts near the top */
-    }
-
     h1 {
-        font-size: 2rem; /* Slightly larger for better visibility */
-        margin: 0 0 20px 0; /* Increased bottom margin for gap below h1 */
-        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 10px;
     }
 
     .header {
         padding: 0 10px;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px; /* Slightly increased gap for better spacing */
-        flex-direction: row;
-        margin-bottom: 20px; /* Added gap between header and gameContainer */
+        justify-content: center; /* Center items when wrapping */
+        gap: 8px; /* Tighter gap */
+        flex-direction: row; /* Ensure row layout */
     }
 
     .header h2 {
-        font-size: 18px; /* Slightly larger for readability */
+        font-size: 16px; /* Smaller font */
         margin: 5px;
-        min-width: 80px;
-        flex: 1 1 80px;
+        min-width: 80px; /* Further reduced min-width */
+        flex: 1 1 80px; /* Flexible basis to keep points and timer together */
         text-align: center;
     }
 
     .startButton, .resetButton {
-        height: 35px; /* Slightly larger buttons */
-        width: 55px;
-        font-size: 20px; /* Slightly larger font */
-        flex: 0 0 auto;
+        height: 30px; /* Smaller buttons */
+        width: 50px;
+        font-size: 18px; /* Smaller font */
+        flex: 0 0 auto; /* Prevent buttons from stretching */
     }
 
     .gameContainer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        gap: 8px; /* Increased gap for better card separation */
-        padding: 8px;
-        margin: 0 auto 10px; /* Added bottom margin for spacing */
+        gap: 5px;
+        padding: 5px;
+        margin: 5px auto;
         max-width: 98%;
     }
 
     .card {
-        height: 25vw; /* Increased size to feel less "small" */
-        width: 25vw;
-        max-height: 90px; /* Slightly larger max size */
-        max-width: 90px;
-        border: 3px solid #E0DF8A; /* Thicker border for emphasis */
+        height: 22vw;
+        width: 22vw;
+        max-height: 80px;
+        max-width: 80px;
+        border: 2px solid #E0DF8A;
     }
 }
