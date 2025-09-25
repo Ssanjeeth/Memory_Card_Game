@@ -1,12 +1,31 @@
-body {
-    background-color: #F8F7BA;
+/* Reset default margins and ensure box-sizing */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    background-color: #F8F7BA;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading styling */
 h1 {
     text-align: center;
     font-family: "Shojumaru";
     font-size: 4rem;
     color: #E45A92;
+    margin-top: 20px;
 }
 
 h1.dance {
@@ -22,11 +41,14 @@ h1.dance {
     }
 }
 
+/* Header styling */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    width: 100%;
+    max-width: 90%;
 }
 
 .header h2 {
@@ -41,6 +63,7 @@ h1.dance {
     font-variant-numeric: tabular-nums;
 }
 
+/* Button styling */
 .startButton {
     display: inline-block;
     height: 40px;
@@ -77,19 +100,24 @@ h1.dance {
     transform: scale(1.08) rotateY(8deg);
 }
 
+/* Game container styling */
 .gameContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     border: 5px solid #4A90E2;
     gap: 10px;
-    margin: 0px 10px;
+    margin: 10px auto;
     padding: 10px;
+    max-width: 90%;
 }
 
+/* Card styling */
 .card {
-    height: 120px;
-    width: 130px;
+    height: 15vw;
+    width: 15vw;
+    max-height: 120px;
+    max-width: 130px;
     border: 5px solid #d1be7b;
     position: relative;
     perspective: 1000px;
@@ -130,44 +158,79 @@ h1.dance {
     backface-visibility: hidden;
 }
 
+/* Responsive adjustments for medium screens */
 @media (max-width: 720px) {
     h1 {
         font-size: 2rem;
+        margin-top: 15px;
     }
-    h2{
+
+    .header {
+        padding: 0 10px;
+    }
+
+    .header h2 {
         font-size: 20px;
         margin: 7.5px;
+        min-width: 100px;
     }
-    
+
     .gameContainer {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        margin: 5px auto;
+        max-width: 95%;
     }
 
     .card {
-        height: 96px;
-        width: 96px;
+        height: 20vw;
+        width: 20vw;
+        max-height: 96px;
+        max-width: 96px;
         border: 3px solid #E0DF8A;
     }
 }
 
-@media (max-width: 450px){
-    h1{
+/* Responsive adjustments for small screens */
+@media (max-width: 450px) {
+    h1 {
         font-size: 1.5rem;
-        margin: 7.5px;
+        margin-top: 10px;
     }
-    h2{
+
+    .header {
+        padding: 0 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+        margin: 5px;
+        min-width: 100px;
+    }
+
+    .startButton, .resetButton {
+        height: 35px;
+        width: 55px;
         font-size: 20px;
     }
+
     .gameContainer {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 1fr);
         gap: 5px;
         padding: 5px;
+        margin: 5px auto;
+        max-width: 98%;
     }
+
     .card {
-        height: 80px;
-        width: 80px;
+        height: 22vw;
+        width: 22vw;
+        max-height: 80px;
+        max-width: 80px;
         border: 2px solid #E0DF8A;
     }
 }
