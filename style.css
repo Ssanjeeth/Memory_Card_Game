@@ -27,7 +27,7 @@ h1 {
     font-size: 4rem;
     color: #E45A92;
     margin: 20px 0 10px; /* Adjusted for balanced spacing */
-    margin-top: 40px;
+    
 }
 
 h1.dance {
@@ -51,7 +51,7 @@ h1.dance {
     padding: 0 20px;
     width: 100%;
     max-width: 90%;
-    margin-top: 20px;
+    
 }
 
 /* Header text styling */
@@ -114,7 +114,7 @@ h1.dance {
     margin: 10px auto;
     padding: 10px;
     max-width: 90%;
-    margin-top: 30px;
+    
 }
 
 /* Card styling */
@@ -210,6 +210,7 @@ h1.dance {
     h1 {
         font-size: 1.5rem;
         margin: 10px 0 5px; /* Tighter margins for compact layout */
+        margin-top: 25px;
     }
 
     .header {
@@ -218,6 +219,7 @@ h1.dance {
         justify-content: center;
         gap: 8px;
         flex-direction: row;
+        margin-top: 20px;
     }
 
     .header h2 {
@@ -241,8 +243,9 @@ h1.dance {
         gap: 5px;
         padding: 5px;
         margin: 5px auto;
+        margin-top: 30px;
         max-width: 98%;
-        max-height: 60vh; /* Limit height to fit within viewport */
+        max-height: 70vh; /* Limit height to fit within viewport */
     }
 
     .card {
