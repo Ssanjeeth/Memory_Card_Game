@@ -167,12 +167,16 @@ h1.dance {
 
     .header {
         padding: 0 10px;
+        flex-wrap: wrap;
+        justify-content: space-around; /* More balanced distribution */
+        gap: 10px;
     }
 
     .header h2 {
         font-size: 20px;
         margin: 7.5px;
-        min-width: 100px;
+        min-width: 90px; /* Reduced min-width */
+        flex: 1; /* Allow h2 to grow/shrink */
     }
 
     .gameContainer {
@@ -201,20 +205,24 @@ h1.dance {
     .header {
         padding: 0 10px;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        justify-content: center; /* Center items when wrapping */
+        gap: 8px; /* Tighter gap */
+        flex-direction: row; /* Ensure row layout */
     }
 
     .header h2 {
-        font-size: 18px;
+        font-size: 16px; /* Smaller font */
         margin: 5px;
-        min-width: 100px;
+        min-width: 80px; /* Further reduced min-width */
+        flex: 1 1 80px; /* Flexible basis to keep points and timer together */
+        text-align: center;
     }
 
     .startButton, .resetButton {
-        height: 35px;
-        width: 55px;
-        font-size: 20px;
+        height: 30px; /* Smaller buttons */
+        width: 50px;
+        font-size: 18px; /* Smaller font */
+        flex: 0 0 auto; /* Prevent buttons from stretching */
     }
 
     .gameContainer {
