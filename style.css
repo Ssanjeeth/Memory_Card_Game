@@ -27,7 +27,6 @@ h1 {
     font-size: 4rem;
     color: #E45A92;
     margin: 20px 0 10px; /* Adjusted for balanced spacing */
-    
 }
 
 h1.dance {
@@ -51,7 +50,6 @@ h1.dance {
     padding: 0 20px;
     width: 100%;
     max-width: 90%;
-    
 }
 
 /* Header text styling */
@@ -114,7 +112,6 @@ h1.dance {
     margin: 10px auto;
     padding: 10px;
     max-width: 90%;
-    
 }
 
 /* Card styling */
@@ -240,18 +237,38 @@ h1.dance {
     .gameContainer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        gap: 5px;
+        gap: 3px; /* Reduced gap to save space */
         padding: 5px;
         margin: 5px auto;
-        max-width: 98%;
+        max-width: 95%; /* Slightly tighter to prevent overflow */
         max-height: 60vh; /* Limit height to fit within viewport */
+        overflow-x: hidden; /* Failsafe to prevent horizontal overflow */
     }
 
     .card {
-        height: 22vw;
-        width: 22vw;
-        max-height: 80px;
-        max-width: 80px;
+        height: 20vw; /* Reduced from 22vw */
+        width: 20vw; /* Reduced from 22vw */
+        max-height: 70px; /* Reduced from 80px */
+        max-width: 70px; /* Reduced from 80px */
         border: 2px solid #E0DF8A;
+    }
+}
+
+/* Extra media query for very small screens (e.g., <360px) */
+@media (max-width: 360px) {
+    .gameContainer {
+        grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns */
+        grid-template-rows: repeat(8, 1fr); /* Adjust rows for 24 cards */
+        gap: 2px;
+        padding: 4px;
+        max-width: 90%;
+    }
+
+    .card {
+        height: 25vw; /* Slightly larger to fit 3-column layout */
+        width: 25vw;
+        max-height: 65px;
+        max-width: 65px;
+        border: 1px solid #E0DF8A; /* Thinner border */
     }
 }
