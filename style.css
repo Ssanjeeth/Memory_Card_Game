@@ -27,6 +27,7 @@ h1 {
     font-size: 4rem;
     color: #E45A92;
     margin: 20px 0 10px; /* Adjusted for balanced spacing */
+    margin-top: 40px;
 }
 
 h1.dance {
@@ -50,6 +51,7 @@ h1.dance {
     padding: 0 20px;
     width: 100%;
     max-width: 90%;
+    margin-top: 20px;
 }
 
 /* Header text styling */
@@ -112,6 +114,7 @@ h1.dance {
     margin: 10px auto;
     padding: 10px;
     max-width: 90%;
+    margin-top: 30px;
 }
 
 /* Card styling */
