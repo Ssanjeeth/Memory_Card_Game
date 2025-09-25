@@ -199,6 +199,7 @@ h1.dance {
 @media (max-width: 450px) {
     body {
         padding-top: 15px; /* Ensure h1 starts near top */
+        overflow-y: auto; /* Allow scrolling if needed */
     }
 
     h1 {
@@ -236,15 +237,18 @@ h1.dance {
         grid-template-rows: repeat(6, 1fr);
         gap: 8px; /* Better card separation */
         padding: 8px;
-        margin: 0 auto 10px; /* Gap below container */
+        margin: 0 auto 20px; /* Increased bottom margin */
         max-width: 98%;
+        box-sizing: border-box; /* Ensure padding/border included */
+        overflow: hidden; /* Prevent container overflow */
     }
 
     .card {
-        height: 25vw; /* Less "small" */
-        width: 25vw;
-        max-height: 90px; /* Larger max size */
-        max-width: 90px;
+        height: 20vw; /* Reduced to prevent overflow */
+        width: 20vw;
+        max-height: 80px; /* Adjusted to fit better */
+        max-width: 80px;
         border: 3px solid #E0DF8A; /* Thicker border */
+        box-sizing: border-box; /* Ensure border included */
     }
 }
