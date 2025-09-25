@@ -17,7 +17,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Vertically center content */
 }
 
 /* Heading styling */
@@ -26,7 +25,7 @@ h1 {
     font-family: "Shojumaru";
     font-size: 4rem;
     color: #E45A92;
-    margin: 20px 0 10px; /* Adjusted for balanced spacing */
+    margin-top: 20px;
 }
 
 h1.dance {
@@ -52,7 +51,6 @@ h1.dance {
     max-width: 90%;
 }
 
-/* Header text styling */
 .header h2 {
     display: inline-block;
     min-width: 120px;
@@ -164,21 +162,21 @@ h1.dance {
 @media (max-width: 720px) {
     h1 {
         font-size: 2rem;
-        margin: 15px 0 10px;
+        margin-top: 15px;
     }
 
     .header {
         padding: 0 10px;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-around; /* More balanced distribution */
         gap: 10px;
     }
 
     .header h2 {
         font-size: 20px;
         margin: 7.5px;
-        min-width: 90px;
-        flex: 1;
+        min-width: 90px; /* Reduced min-width */
+        flex: 1; /* Allow h2 to grow/shrink */
     }
 
     .gameContainer {
@@ -199,76 +197,48 @@ h1.dance {
 
 /* Responsive adjustments for small screens */
 @media (max-width: 450px) {
-    body {
-        justify-content: center; /* Reinforce vertical centering */
-        padding: 10px 0; /* Add slight padding to avoid edge clipping */
-    }
-
     h1 {
         font-size: 1.5rem;
-        margin: 10px 0 5px; /* Tighter margins for compact layout */
-        margin-top: 25px;
+        margin-top: 10px;
     }
 
     .header {
         padding: 0 10px;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        flex-direction: row;
-        margin-top: 20px;
+        justify-content: center; /* Center items when wrapping */
+        gap: 8px; /* Tighter gap */
+        flex-direction: row; /* Ensure row layout */
     }
 
     .header h2 {
-        font-size: 16px;
+        font-size: 16px; /* Smaller font */
         margin: 5px;
-        min-width: 80px;
-        flex: 1 1 80px;
+        min-width: 80px; /* Further reduced min-width */
+        flex: 1 1 80px; /* Flexible basis to keep points and timer together */
         text-align: center;
     }
 
     .startButton, .resetButton {
-        height: 30px;
+        height: 30px; /* Smaller buttons */
         width: 50px;
-        font-size: 18px;
-        flex: 0 0 auto;
+        font-size: 18px; /* Smaller font */
+        flex: 0 0 auto; /* Prevent buttons from stretching */
     }
 
     .gameContainer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        gap: 3px; /* Reduced gap to save space */
+        gap: 5px;
         padding: 5px;
         margin: 5px auto;
-        max-width: 95%; /* Slightly tighter to prevent overflow */
-        max-height: 60vh; /* Limit height to fit within viewport */
-        overflow-x: hidden; /* Failsafe to prevent horizontal overflow */
+        max-width: 98%;
     }
 
     .card {
-        height: 20vw; /* Reduced from 22vw */
-        width: 20vw; /* Reduced from 22vw */
-        max-height: 70px; /* Reduced from 80px */
-        max-width: 70px; /* Reduced from 80px */
+        height: 22vw;
+        width: 22vw;
+        max-height: 80px;
+        max-width: 80px;
         border: 2px solid #E0DF8A;
-    }
-}
-
-/* Extra media query for very small screens (e.g., <360px) */
-@media (max-width: 360px) {
-    .gameContainer {
-        grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns */
-        grid-template-rows: repeat(8, 1fr); /* Adjust rows for 24 cards */
-        gap: 2px;
-        padding: 4px;
-        max-width: 90%;
-    }
-
-    .card {
-        height: 25vw; /* Slightly larger to fit 3-column layout */
-        width: 25vw;
-        max-height: 65px;
-        max-width: 65px;
-        border: 1px solid #E0DF8A; /* Thinner border */
     }
 }
