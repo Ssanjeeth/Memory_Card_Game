@@ -197,48 +197,54 @@ h1.dance {
 
 /* Responsive adjustments for small screens */
 @media (max-width: 450px) {
+    body {
+        padding-top: 15px; /* Ensure h1 starts near top */
+    }
+
     h1 {
-        font-size: 1.5rem;
-        margin-top: 10px;
+        font-size: 2rem; /* Larger for visibility */
+        margin: 0 0 20px 0; /* Gap below h1 */
+        text-align: center;
     }
 
     .header {
         padding: 0 10px;
         flex-wrap: wrap;
-        justify-content: center; /* Center items when wrapping */
-        gap: 8px; /* Tighter gap */
-        flex-direction: row; /* Ensure row layout */
+        justify-content: center;
+        gap: 10px; /* Increased for spacing */
+        flex-direction: row;
+        margin-bottom: 20px; /* Gap below header */
     }
 
     .header h2 {
-        font-size: 16px; /* Smaller font */
+        font-size: 18px; /* Larger for readability */
         margin: 5px;
-        min-width: 80px; /* Further reduced min-width */
-        flex: 1 1 80px; /* Flexible basis to keep points and timer together */
+        min-width: 80px;
+        flex: 1 1 80px;
         text-align: center;
     }
 
     .startButton, .resetButton {
-        height: 30px; /* Smaller buttons */
-        width: 50px;
-        font-size: 18px; /* Smaller font */
-        flex: 0 0 auto; /* Prevent buttons from stretching */
+        height: 35px; /* Larger buttons */
+        width: 55px;
+        font-size: 20px; /* Larger font */
+        flex: 0 0 auto;
     }
 
     .gameContainer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        gap: 5px;
-        padding: 5px;
-        margin: 5px auto;
+        gap: 8px; /* Better card separation */
+        padding: 8px;
+        margin: 0 auto 10px; /* Gap below container */
         max-width: 98%;
     }
 
     .card {
-        height: 22vw;
-        width: 22vw;
-        max-height: 80px;
-        max-width: 80px;
-        border: 2px solid #E0DF8A;
+        height: 25vw; /* Less "small" */
+        width: 25vw;
+        max-height: 90px; /* Larger max size */
+        max-width: 90px;
+        border: 3px solid #E0DF8A; /* Thicker border */
     }
 }
