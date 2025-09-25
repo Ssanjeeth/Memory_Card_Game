@@ -134,7 +134,11 @@ h1.dance {
     h1 {
         font-size: 2rem;
     }
-
+    h2{
+        font-size: 20px;
+        margin: 7.5px;
+    }
+    
     .gameContainer {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -144,5 +148,26 @@ h1.dance {
         height: 96px;
         width: 96px;
         border: 3px solid #E0DF8A;
+    }
+}
+
+@media (max-width: 450px){
+    h1{
+        font-size: 1.5rem;
+        margin: 7.5px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .gameContainer {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 5px;
+        padding: 5px;
+    }
+    .card {
+        height: 80px;
+        width: 80px;
+        border: 2px solid #E0DF8A;
     }
 }
