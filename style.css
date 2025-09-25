@@ -200,6 +200,7 @@ h1.dance {
     body {
         padding-top: 15px; /* Ensure h1 starts near top */
         overflow-y: auto; /* Allow scrolling if needed */
+        overflow-x: hidden; /* Prevent right overflow */
     }
 
     h1 {
@@ -235,20 +236,20 @@ h1.dance {
     .gameContainer {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(6, 1fr);
-        gap: 8px; /* Better card separation */
-        padding: 8px;
-        margin: 0 auto 20px; /* Increased bottom margin */
-        max-width: 98%;
+        gap: 6px; /* Reduced to fit better */
+        padding: 6px; /* Reduced padding */
+        margin: 0 auto 20px; /* Bottom margin for spacing */
+        max-width: 92%; /* Reduced to prevent right overflow */
         box-sizing: border-box; /* Ensure padding/border included */
         overflow: hidden; /* Prevent container overflow */
     }
 
     .card {
-        height: 20vw; /* Reduced to prevent overflow */
-        width: 20vw;
-        max-height: 80px; /* Adjusted to fit better */
-        max-width: 80px;
-        border: 3px solid #E0DF8A; /* Thicker border */
+        height: 18vw; /* Further reduced to prevent overflow */
+        width: 18vw;
+        max-height: 70px; /* Smaller to fit screen */
+        max-width: 70px;
+        border: 2px solid #E0DF8A; /* Thinner border to save space */
         box-sizing: border-box; /* Ensure border included */
     }
 }
